@@ -28,7 +28,7 @@ public class StartUpListener implements ServletContextListener{
 	}
 
 	private void initModule() {
-		ModuleManager.add("org.bc.hermes");
+		ModuleManager.add("com.youwei.leshi");
 	}
 
 	public static synchronized void initDataSource(){
@@ -56,7 +56,7 @@ public class StartUpListener implements ServletContextListener{
 		settings.put(AvailableSettings.PROXOOL_POOL_ALIAS, "mySqlProxool");
 		
 //		settings.put("annotated.packages", HouseRent.class.getPackage().getName());
-		settings.put("annotated.packages", "org.bc.hermes");
+		settings.put("annotated.packages", "com.youwei.leshi");
 		SessionFactoryBuilder.applySettings(settings);
 //		SimpDaoTool.getGlobalCommonDaoService().getUnique(User.class, 0);
 	}

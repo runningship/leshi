@@ -1,0 +1,211 @@
+*{ margin:0; padding:0;}
+
+img{ border:none;}
+
+ul,li{ list-style:none;}
+
+a{ text-decoration:none;}
+
+em, h1{ font-style:normal;}
+
+body{font: 100% 微软雅黑, 宋体, 新宋体;}
+
+.fl{ float:left;}
+.fr{ float:right;}
+
+
+
+.warp{ width:100%; display:inline-block;}
+
+.w_topLine{ height:3px; background-color:#ff4545;}
+
+.w_headerBg{ height:105px; background-color:#ff4545; background:url(../images/headerBg.png) repeat-x;}
+
+.conWarp{ width:1002px; margin:0 auto;}
+
+.logo{ margin-top:23px; float:left;}
+
+.hotline{ margin-top:37px; float:right;}
+
+
+.nav{ height:45px; background-color:#ee3131;}
+
+.navUl li{ float:left;}
+
+.navUl li a{ display:block; padding:0 30px; height:45px; line-height:45px; color:#ffffff; font-size:14px;}
+
+.navUl li a.s{ background:url(../images/navHoverBg.png) repeat-x; color:#f51010;}
+
+.navUl li a:hover, .navUl li a.hover{ background-color:#a90202; color:#ffffff;}
+
+.navUl li a.s:hover{ background:url(../images/navHoverBg.png) repeat-x; color:#f51010;}
+
+.navUl .down_menu{ position:absolute; width:152px; height:auto; z-index:50;}
+.navUl .down_menu .down_menu_head{ height:12px; display:block; width:152px;}
+.navUl .down_menu .down_menu_foot{ height:12px; display:block; width:152px;}
+.navUl .down_menu .down_menu_con{ display:block; width:152px; background-color:#cb0000; padding-top:8px; padding-bottom:8px;}
+.navUl .down_menu a{ display:block; width:134px; height:35px; line-height:35px; font-size:14px; text-align:left; padding:0; padding-left:18px;}
+.navUl .down_menu a:hover{ background-color:#ffffff; color:#f51010;}
+.navUl .shenlan{ height:2px;}
+.navUl .shadow1{ width:auto; height:1px; background-color:#cbcbcb;}
+.navUl .shadow2{ width:auto; height:1px; background-color:#e3e3e3;}
+
+
+
+
+
+
+.banner{ width:1002px; height:374px; margin:16px auto 40px;}
+.banner_1{ width:1002px; height:350px;}
+.banner_2{ width:240px; height:24px; margin:0 auto;}
+.banner_2 a{ display: block; width:40px; height:6px; background-color:#bababa; margin-top:18px; float:left;}
+.banner_2 a:hover{ background-color:#008094;}
+.banner_2 .current{ background-color:#008094;}
+
+
+
+.borbot{ float:left; padding-bottom: 10px; margin-bottom: 30px;}
+
+.w304{ width:304px; float:left;}
+
+.w653{ width:653px; float:right;}
+
+.padBot30{ padding-bottom:35px;}
+
+.marTop{ margin-top:25px;}
+
+.margin10 {margin: 10px;}
+
+.marginright45 {margin-right: 45px;}
+
+.font_14{ font-size:14px;color: #646464; font-family: "Arial","宋体";}
+
+.lineheight17 {line-height: 1.7em; text-indent: 2em;}
+
+.titH1{ font-size:18px; color:#666666; font-weight:normal;border-bottom: 1px solid #d2d2d2; padding-bottom: 5px;}
+
+.titH1_en{color: #666666;font-family:Arial;font-size: 14px; margin-left: 10px;}
+
+.imgBox{ margin:25px 0; width:100%; text-align:center;}
+
+.imgBox2{ margin:20px 0;}
+
+
+.more {
+    color: #f00;
+    font-family: "宋体";
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+.workOther{ width:100%; float:left;}
+
+
+.threeBox{ display:inline-block;}
+
+
+.threeBox .box_text {
+    background-color: #eee;
+    height: 345px;
+    margin-top: 16px;
+}
+
+.borderdashedTop {
+    border-top: 1px dashed #d2d2d2;
+}
+.borderdashedBot {
+    border-bottom: 1px dashed #d2d2d2;
+}
+
+
+.foot{ height:190px; border-bottom:10px solid #ff4545; background-color:#e5e5e5; margin-top:40px; border-top:1px solid #bfbfbf;}
+
+.footImg{ margin-top:40px; float:left;}
+
+.footCon{ margin-top:40px; float:right;}
+
+.foot_text1 { font-family: "宋体";font-size: 14px;margin-left: 5px; margin-top: 19px;}
+
+.foot_text1 a {color: #686868;text-decoration: none;}
+
+.foot_text2 {font-family: Arial,Helvetica,sans-serif;font-size: 12px; margin-left: 5px;margin-top: 18px; color: #686868;}
+
+
+
+
+
+
+
+.listPage{ width:100%; margin:30px 0 10px 0; height:55px; background-color:#fff; display:inline-block;}
+
+.listPage .pagination {
+    display: inline-block;
+    font-size: 12px;
+    height: 25px;
+    line-height: 23px;
+    overflow: hidden;
+    padding: 15px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.listPage .pagination span {
+    display: inline-block;
+    height: 23px;
+    text-align: center;
+    width: 23px;
+}
+
+.listPage .pagination .btn-s, .listPage .pagination .prev, .listPage .pagination .next {
+    margin: 0;
+    width: 72px;
+}
+.listPage .pagination .prev {
+}
+
+.listPage .pagination span.prev, .listPage .pagination span.next {
+    border: 1px solid #ceced0;
+    color: #999;
+}
+
+.listPage .pagination .cur {
+    background-color:#d53030;
+    border: 1px solid #ca0000;
+    color: #fff ;
+    font-weight: 700;
+    position: relative;
+}
+
+.listPage .pagination a {
+    background: linear-gradient(#fefefe, #f7f7f7) repeat scroll 0 0;
+    border: 1px solid #eee;
+    color: #333;
+    display: inline-block;
+    height: 23px;
+    text-align: center;
+    width: 23px;
+}
+
+.listPage .pagination a:hover { border:1px solid #ca0000;}
+
+.listPage .pagination .page-skip {
+    height: 25px;
+    padding: 0 10px;
+    width: auto;
+}
+
+.listPage .pagination .page-skip input {
+    height: 17px;
+    margin: 0 5px;
+    padding: 2px 3px;
+    width: 35px;
+}
+
+.listPage .pagination .page-skip a {
+    display: inline-block;
+    float: none;
+    margin: 0 5px;
+    vertical-align: top;
+    width: 50px;
+}

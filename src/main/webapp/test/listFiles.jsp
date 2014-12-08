@@ -9,14 +9,7 @@
 </head>
 <body>
 <c:forEach items="${files}"  var="file">
-<c:choose>
-<c:when test="${file.isDir}">
-<div> <a style="color:blue">${file.name }</a></div>
-</c:when>
-<c:otherwise>
 <div> ${file.name } -- ${file.size}</div>
-</c:otherwise>
-</c:choose>
 </c:forEach>
 </body>
 </html>

@@ -8,7 +8,9 @@ import javax.servlet.ServletContext;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
+import org.bc.sdak.CommonDaoService;
 import org.bc.sdak.Page;
+import org.bc.sdak.TransactionalServiceHelper;
 
 import com.youwei.ThreadSession;
 import com.youwei.leshi.util.JSONHelper;
@@ -19,6 +21,8 @@ import com.youwei.web.WebMethod;
 @Module(name="/admin/common")
 public class AdminCommon {
 
+	CommonDaoService dao = TransactionalServiceHelper.getTransactionalService(CommonDaoService.class);
+	
 	@WebMethod
 	public ModelAndView list(Page<Map> page){
 		ModelAndView mv = new ModelAndView();

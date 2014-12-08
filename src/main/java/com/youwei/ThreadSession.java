@@ -4,7 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.youwei.leshi.user.entity.User;
+import com.youwei.leshi.admin.entity.User;
+
 import org.bc.sdak.GException;
 public class ThreadSession {
 

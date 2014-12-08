@@ -1,0 +1,12 @@
+.divPage{
+	   height:33px; border-bottom:1px solid #cccccc; background-color:#fff;
+}
+
+.pageMain{ width:900px; height:35px;}
+
+.pageMain button{ display:block; line-height:35px; height:35px; padding:0 14px; float:left; border:none; border-right:1px solid #dddddd; background:none; color:#555555;}
+
+.pageMain button.now, .pageMain button.now:hover{ background-color:#008765; color:#ffffff;}
+
+.pageMain button:hover{ background-color:#dcdcdc; color:#000000;}
+.pageMain button.btn-primary{background-color: #008765;border-color: #008765; color:#ffffff;}

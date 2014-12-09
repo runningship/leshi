@@ -39,7 +39,9 @@ public class PublicFieldSupportingELResolver extends ELResolver{
                  Object value = field.get(base);
                  context.setPropertyResolved(true);
                  return value;
-             } catch (Exception e) {
+             }catch(NoSuchFieldException ex){
+            	 return null;
+             }catch (Exception e) {
                  throw new PropertyNotFoundException(e);
              }
          }

@@ -11,6 +11,11 @@
 <script src="js/jquery-1.6.4.min.js"></script>
 <script src="js/jquery.nivo.slider.pack.js"></script> 
 <script src='js/main.js'></script>
+<script type="text/javascript">
+$(function(){
+	$('#index').addClass('s');
+});
+</script>
 </head>
 
 <body>

@@ -1,22 +1,14 @@
 package com.youwei.leshi.admin;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
-
-import javax.servlet.ServletContext;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import java.util.Map;
 
 import org.bc.sdak.CommonDaoService;
 import org.bc.sdak.GException;
 import org.bc.sdak.TransactionalServiceHelper;
 
 import com.youwei.PlatformExceptionType;
-import com.youwei.ThreadSession;
 import com.youwei.leshi.admin.entity.Board;
-import com.youwei.leshi.admin.entity.Post;
 import com.youwei.web.ModelAndView;
 import com.youwei.web.Module;
 import com.youwei.web.WebMethod;
@@ -26,20 +18,10 @@ public class BoardService {
 	CommonDaoService dao = TransactionalServiceHelper.getTransactionalService(CommonDaoService.class);
 	
 	@WebMethod
-	public ModelAndView topBoard(){
+	public ModelAndView list(){
 		ModelAndView mv = new ModelAndView();
-		List<Board> list = dao.listByParams(Board.class, "from Board where fid is null order by orderx");
-		mv.jspData.put("boards", list);
-		return mv;
-	}
-	
-	@WebMethod
-	public ModelAndView subBoard(Integer fid){
-		ModelAndView mv = new ModelAndView();
-		List<Board> list = new ArrayList<Board>();
-		if(fid!=null){
-			list = dao.listByParams(Board.class, "from Board where fid="+fid+" order by orderx");
-		}
+		List<Map> list = dao.listAsMap("select name as name, fname as fname , orderx as orderx , id as id , fid as fid "
+				+ "from Board  order by orderx");
 		mv.jspData.put("boards", list);
 		return mv;
 	}
@@ -51,7 +33,20 @@ public class BoardService {
 		if(po!=null){
 			throw new GException(PlatformExceptionType.BusinessException,"已经存在相同的栏目名称，请修改后再重试。");
 		}
+		Board parent = dao.get(Board.class,board.fid);
+		if(parent!=null){
+			board.fname = parent.name;
+		}
+		
 		dao.saveOrUpdate(board);
+		return mv;
+	}
+	
+	@WebMethod
+	public ModelAndView add(){
+		ModelAndView mv = new ModelAndView();
+		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null or fid=0 order by orderx");
+		mv.jspData.put("modules", modules);
 		return mv;
 	}
 	

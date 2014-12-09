@@ -1,5 +1,7 @@
 package com.youwei.leshi.admin;
 
+import java.util.List;
+
 import org.bc.sdak.CommonDaoService;
 import org.bc.sdak.GException;
 import org.bc.sdak.TransactionalServiceHelper;
@@ -19,8 +21,8 @@ public class UserService {
 	public ModelAndView login(User user){
 		ModelAndView mv = new ModelAndView();
 		String pwd = SecurityHelper.Md5(user.pwd);
-		User po = dao.getUniqueByParams(User.class, new String[]{"account" , "pwd"}, new Object[]{user.account  , pwd});
-		if(po==null){
+		List<User> list = dao.listByParams(User.class, new String[]{"name" , "pwd"}, new Object[]{user.name  , pwd});
+		if(list==null || list.isEmpty()){
 			throw new GException(PlatformExceptionType.BusinessException,"用户名或密码不正确。");
 		}
 		return mv;

@@ -65,6 +65,9 @@ public class GrandFilter implements Filter {
 		
 		ThreadSession.setHttpServletRequest(req);
 		ThreadSession.setHttpServletResponse(resp);
+//		if(ThreadSession.getUser()==null){
+//			resp.sendRedirect("admin/index.jsp");
+//		}
 		Handler handler = ModuleManager.getHandler(path);
 		if(handler==null){
 			chain.doFilter(request, response);

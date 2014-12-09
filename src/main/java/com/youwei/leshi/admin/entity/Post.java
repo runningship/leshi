@@ -22,6 +22,8 @@ public class Post {
 	
 	public Date updatetime;
 	
+	public Integer orderx;
+	
 	//Board Id;
 	public Integer bid;
 	

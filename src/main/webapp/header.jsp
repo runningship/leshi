@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="warp w_headerBg">
     <div class="conWarp">
          
@@ -12,79 +13,21 @@
     
     <ul class="conWarp navUl">
          
-        <li><a href="#" class="s">首页</a></li>
-        <li><a href="#">企业历程</a>
+        <li><a href="index.jsp"  id="index">首页</a></li>
+    <c:forEach items="${modules}"  var="module">
+        <li>
+        	<a <c:if test="${module.id==topBoard.id}">class="s"</c:if> href="newsList.jsp?topId=${module.id}">${module.name}</a>
             <div class="down_menu" style="display:none;">
                 <span class=" down_menu_head"></span>
                 <span class="down_menu_con">
-                <a href="#">企业新闻</a>
-                <a href="#">企业之星</a>
-                <a href="#">品味生活</a>
-                <a href="#">精彩瞬间</a>
+                    <c:forEach items="${module.children}"  var="lanmu">
+                        <a href="newsList.jsp?topId=${module.id}&bid=${lanmu.id}">${lanmu.name}</a>
+                    </c:forEach>
                 </span>
                 <span class="down_menu_foot"></span>
             </div>
         </li>
-        <li><a href="#">战略文化</a>
-            <div class="down_menu" style="display:none;">
-                <span class=" down_menu_head"></span>
-                <span class="down_menu_con">
-                <a href="#">企业新闻</a>
-                <a href="#">企业之星</a>
-                <a href="#">品味生活</a>
-                <a href="#">精彩瞬间</a>
-                </span>
-                <span class="down_menu_foot"></span>
-            </div>
-        </li>
-        <li><a href="#">新闻中心</a>
-            <div class="down_menu" style="display:none;">
-                <span class=" down_menu_head"></span>
-                <span class="down_menu_con">
-                <a href="#">企业新闻</a>
-                <a href="#">企业之星</a>
-                <a href="#">品味生活</a>
-                <a href="#">精彩瞬间</a>
-                </span>
-                <span class="down_menu_foot"></span>
-            </div>
-        </li>
-        <li><a href="#">团队风采</a>
-            <div class="down_menu" style="display:none;">
-                <span class=" down_menu_head"></span>
-                <span class="down_menu_con">
-                <a href="#">企业新闻</a>
-                <a href="#">企业之星</a>
-                <a href="#">品味生活</a>
-                <a href="#">精彩瞬间</a>
-                </span>
-                <span class="down_menu_foot"></span>
-            </div>
-        </li>
-        <li><a href="#">服务网点</a>
-            <div class="down_menu" style="display:none;">
-                <span class=" down_menu_head"></span>
-                <span class="down_menu_con">
-                <a href="#">企业新闻</a>
-                <a href="#">企业之星</a>
-                <a href="#">品味生活</a>
-                <a href="#">精彩瞬间</a>
-                </span>
-                <span class="down_menu_foot"></span>
-            </div>
-        </li>
-        <li><a href="#">招聘职位</a>
-            <div class="down_menu" style="display:none;">
-                <span class=" down_menu_head"></span>
-                <span class="down_menu_con">
-                <a href="#">企业新闻</a>
-                <a href="#">企业之星</a>
-                <a href="#">品味生活</a>
-                <a href="#">精彩瞬间</a>
-                </span>
-                <span class="down_menu_foot"></span>
-            </div>
-        </li>
+    </c:forEach>
          
     </ul>
     

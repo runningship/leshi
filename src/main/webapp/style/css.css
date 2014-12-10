@@ -119,6 +119,55 @@ body{font: 100% 微软雅黑, 宋体, 新宋体;}
 }
 
 
+.font_lan {
+    color: #0d234f;
+    font-family: "微软雅黑","黑体";
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.font_hui_12 {
+    color: #646464;
+    font-family: "Arial","宋体";
+    font-size: 12px;
+    text-align: left;
+}
+
+.erweima {
+	border-color:none;
+    background-color: #fff;
+    border-color: #ff4545 #ff4545 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    bottom: 100px;
+    height: 165px;
+    position: absolute;
+    width: 302px;
+    z-index: 10;
+}
+.erweima_left {
+    height: 120px;
+    margin-left: 28px;
+    margin-top: 22px;
+    width: 120px;
+}
+.erweima_left img{ width:100%;}
+
+.erweima_zi {
+    height: 120px;
+    margin-left: 18px;
+    margin-top: 22px;
+    width: 125px;
+}
+.position {
+    position: relative;
+    z-index: 10;
+}
+
+
+
+
 .foot{ height:190px; border-bottom:10px solid #ff4545; background-color:#e5e5e5; margin-top:40px; border-top:1px solid #bfbfbf;}
 
 .footImg{ margin-top:40px; float:left;}

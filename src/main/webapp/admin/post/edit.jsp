@@ -58,7 +58,7 @@ $(function(){
 </script>
 </head>
 <body>
-<form name="form1" method="post" class="definewidth m20">
+<form name="form1" method="post" class="definewidth m20" onsubmit="return false;">
 <input name="fid" id="fid" type="hidden">
 <input name="id" id="id" type="hidden">
 <table class="table table-bordered table-hover m10">
@@ -90,7 +90,7 @@ $(function(){
     <tr>
         <td class="tableleft">正文</td>
         <td>
-        	<span id="editor" type="text/plain" name="conts" value="${post.conts}" style="width:99%;height:300px;"></span>
+        	<span id="editor" type="text/plain" name="conts"  style="width:99%;height:300px;"></span>
         </td>
     </tr>
     
@@ -107,7 +107,7 @@ $(function(){
 <script>
     $(function () {       
 		$('#backid').click(function(){
-			window.location.href="topBoard.jsp";
+			window.location.href="list.jsp";
 		 });
         var fid = getParam('fid');
         $('#fid').val(fid);
@@ -122,8 +122,7 @@ function save(){
         url: '/leshi/c/admin/post/update',
         data:a,
         mysuccess: function(data){
-            art.dialog.opener.doSearch();
-            alert('发布成功');
+            alert('保存成功');
         }
     });
 }

@@ -9,7 +9,7 @@ import com.youwei.leshi.admin.entity.User;
 import org.bc.sdak.GException;
 public class ThreadSession {
 
-//	private static final ThreadLocal<HttpSession> HttpSession = new ThreadLocal<HttpSession>();
+	private static final ThreadLocal<HttpSession> HttpSession = new ThreadLocal<HttpSession>();
 	private static final ThreadLocal<HttpServletRequest> HttpRequest = new ThreadLocal<HttpServletRequest>();
 	private static final ThreadLocal<HttpServletResponse> HttpResponse = new ThreadLocal<HttpServletResponse>();
 	private static final ThreadLocal<Boolean> superAdmin = new ThreadLocal<Boolean>();
@@ -24,12 +24,12 @@ public class ThreadSession {
     	superAdmin.set(sup);
     }
     
-//    public static HttpSession getHttpSession(){
-//    	return HttpSession.get();
-//    }
-//    public static void setHttpSession(HttpSession session){
-//    	HttpSession.set(session);
-//    }
+    public static HttpSession getHttpSession(){
+    	return HttpSession.get();
+    }
+    public static void setHttpSession(HttpSession session){
+    	HttpSession.set(session);
+    }
     public static void setHttpServletRequest(HttpServletRequest reqeust){
     	HttpRequest.set(reqeust);
     }

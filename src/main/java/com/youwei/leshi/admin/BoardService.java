@@ -64,8 +64,9 @@ public class BoardService {
 		Board po = dao.get(Board.class, board.id);
 		if(po!=null){
 			po.name = board.name;
-			po.fid = board.fid;
 			dao.saveOrUpdate(po);
+			
+			dao.execute("update Board set fname=? where fid=?", po.name,po.id);
 		}
 		return mv;
 	}

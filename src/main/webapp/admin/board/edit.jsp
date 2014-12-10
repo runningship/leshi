@@ -13,6 +13,9 @@
     <script type="text/javascript" src="../Js/bootstrap.js"></script>
     <script type="text/javascript" src="../Js/ckform.js"></script>
     <script type="text/javascript" src="../Js/common.js"></script>
+    <script type="text/javascript" src="../Js/artDialog/jquery.artDialog.source.js?skin=default"></script>
+    <script type="text/javascript" src="../Js/artDialog/plugins/iframeTools.source.js"></script>
+         <script type="text/javascript" src="../Js/buildHtml.js"></script>
 
     <style type="text/css">
         body {
@@ -35,8 +38,8 @@
     </style>
 </head>
 <body>
-<form action="index.html" method="post" class="definewidth m20">
-<input type="hidden" name="id" value="{$menu.id}" />
+<form action="index.html" method="post" name="form1" class="definewidth m20">
+<input type="hidden" name="id" id="id" />
 <table class="table table-bordered table-hover m10">
     <tr>
         <td class="tableleft">名称</td>
@@ -49,7 +52,7 @@
     <tr>
         <td class="tableleft"></td>
         <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <button class="btn btn-primary" type="button" onclick="save();return false;">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 </table>
@@ -61,5 +64,21 @@
 		$('#backid').click(function(){
 				window.location.href="index.html";
 		 });
+        var id = getParam('id');
+        $('#id').val(id);
     });
+
+function save(){
+    var a=$('form[name=form1]').serialize();
+    YW.ajax({
+        type: 'POST',
+        url: '/leshi/c/admin/board/update',
+        data:a,
+        mysuccess: function(data){
+            art.dialog.close();
+            alert('发布成功');
+        }
+    });
+}
+
 </script>

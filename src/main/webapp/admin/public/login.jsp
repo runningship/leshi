@@ -58,10 +58,17 @@ function login(){
 	    url: '/leshi/c/admin/user/login',
 	    data: a,
 	    mysuccess: function(json){
-	        window.location="/leshi/admin/index.jsp";
+	        window.location="/leshi/admin/index.jsp#1/2";
 	    }
 	  });
 }
+$(function(){
+	$(document).on('keyup',function(event){
+		if(event.keyCode==13){
+			login();
+		}
+	});
+});
 </script>
 </head>
 <body>

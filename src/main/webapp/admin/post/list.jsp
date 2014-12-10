@@ -82,6 +82,7 @@ function doSearch(){
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
+    	<th>编号</th>
         <th>序号</th>
         <th>栏目名称</th>
         <th>标题</th>
@@ -90,6 +91,7 @@ function doSearch(){
     </thead>
     <tbody>
     	<tr style="display:none" class="repeat">
+    			<td>$[id]</td>
                 <td>$[orderx]</td>
                 <td>$[bname]</td>
                 <td>$[title]</td>

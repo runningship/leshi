@@ -27,6 +27,17 @@
 <!-- 	</servlet-mapping> -->
 	
 	<filter>
+    	<filter-name>UserSessionFilter</filter-name>
+    	<filter-class>com.youwei.web.UserSessionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+    	<filter-name>UserSessionFilter</filter-name>
+    	<url-pattern>/admin/board/*</url-pattern>
+    	<url-pattern>/admin/post/*</url-pattern>
+    	<url-pattern>/admin/index.jsp</url-pattern>
+    </filter-mapping>
+	
+	<filter>
     	<filter-name>grandFilter</filter-name>
     	<filter-class>com.youwei.web.GrandFilter</filter-class>
     	<init-param>
@@ -39,4 +50,5 @@
     	<url-pattern>*.jsp</url-pattern>
     	<url-pattern>/c/*</url-pattern>
     </filter-mapping>
+    
 </web-app>

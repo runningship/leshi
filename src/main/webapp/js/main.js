@@ -9,6 +9,14 @@ $(window).load(function() {
 
 $(document).ready(function() {
   
+  $("#wxpt").hover(
+		  function () {
+			$("#ewm").show();
+		  },
+		  function () {
+			$("#ewm").hide();
+		  });		
+  
   //--------------------------scrollTo------------------------------//  
       
   $(".navUl li").hover(function(){

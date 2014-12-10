@@ -62,12 +62,9 @@ public class GrandFilter implements Filter {
 			path = jspPath.replace("/c", "");
 			resp.setContentType("text/html");
 		}
-		
 		ThreadSession.setHttpServletRequest(req);
 		ThreadSession.setHttpServletResponse(resp);
-//		if(ThreadSession.getUser()==null){
-//			resp.sendRedirect("admin/index.jsp");
-//		}
+		ThreadSession.setHttpSession(req.getSession());
 		Handler handler = ModuleManager.getHandler(path);
 		if(handler==null){
 			chain.doFilter(request, response);

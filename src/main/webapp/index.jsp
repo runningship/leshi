@@ -121,7 +121,7 @@ $(function(){
                   <div class="box_text">
                     <img class=" margin10" src="images/index2-q_30.jpg">
                     <div class=" font_14 margin10 lineheight17">核心价值观是企业文化的灵魂，顺驰具有深厚的文化底蕴，形成了特有的优秀企业文化和氛围。使命般的激情，信任并尊重每一个人，永不满足的挑战精神，鼓励创新主动变革,创造奇迹的团队精神，共同发展分享成功…</div>
-                    <div align="right" class="margin10"><a class="more" target="_blank" href="#">更多&gt;&gt;</a></div>
+                    <div align="right" class="margin10"><a class="more" target="_blank" href="http://ehr.goodjobs.cn/show.php?corpID=33693">更多&gt;&gt;</a></div>
                   </div>
              
              </div>
@@ -131,8 +131,8 @@ $(function(){
     </div>
     
     <div class="conWarp">
-        <div class="width304 fl marginright45"><a target="_blank" href="#"><img border="0" src="images/index2-q_35.jpg"></a></div>
-        <div class="width304 fl marginright45"><a target="_blank" href="#"><img border="0" src="images/index2_37.jpg"></a></div>
+        <div class="width304 fl marginright45"><a target="_blank" href="http://www.zhongjiebao.com"><img border="0" src="images/index2-q_35.jpg"></a></div>
+        <div class="width304 fl marginright45"><a target="_blank" href="http://ehr.goodjobs.cn/show.php?corpID=33693"><img border="0" src="images/index2_37.jpg"></a></div>
         <div id="wxpt" class="width304 fl position"><div id="ewm" style="display: none;" class="erweima"><div class="erweima_left fl"><img src="images/erweima.jpg"></div><div class="erweima_zi fl"><h1 class="font_lan" style="color:#611b74;">乐事不动产</h1><p class="font_hui_12 lineheight18 margintop22">关注乐事不动产<br>微信，享受便捷服务,<br>感受全新体验！</p></div></div><img border="0" src="images/index2-q_39.jpg"></div>
      </div>
 
